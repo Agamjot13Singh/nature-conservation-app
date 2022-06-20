@@ -43,12 +43,10 @@ class HomePageState extends State<HomePage> {
             SizedBox(
               height: 40,
             ),
-            Text('Actions')
+            Text('Actions'),
             ListView(
               scrollDirection: Axis.horizontal,
-              children: [
-
-              ],
+              children: [],
             )
           ],
         ),
