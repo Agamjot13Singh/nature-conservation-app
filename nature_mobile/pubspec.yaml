@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
   appinio_animated_toggle_tab: ^1.0.1
+  sidebarx: ^0.14.0
 
 dev_dependencies:
   flutter_test:

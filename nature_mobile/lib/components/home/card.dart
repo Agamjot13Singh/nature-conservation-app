@@ -3,18 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeCard extends StatelessWidget {
-  const HomeCard(
-      {Key? key,
-      required this.imageUrl,
-      required this.title,
-      required this.name,
-      required this.ago})
-      : super(key: key);
+  const HomeCard({
+    Key? key,
+    required this.imageUrl,
+    required this.title,
+    required this.name,
+  }) : super(key: key);
 
   final String imageUrl;
   final String title;
   final String name;
-  final String ago;
+  // final String ago;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class HomeCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
-            alignment: Alignment.topRight,
+            alignment: Alignment.bottomLeft,
             children: [
               Container(
                 height: 200,
@@ -37,72 +36,47 @@ class HomeCard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(60),
-                    color: Colors.black.withOpacity(0.3),
-                  ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      CupertinoIcons.heart_fill,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    name,
-                    style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  Text(
-                    title,
-                    style: GoogleFonts.poppins(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
+                  padding: const EdgeInsets.only(left: 20, bottom: 15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(
-                        Icons.access_time_filled,
-                        color: Colors.green[900],
-                        size: 15,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
                       Text(
-                        ago,
+                        name,
                         style: GoogleFonts.poppins(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.green[900],
+                          fontSize: 17,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ],
-                  )
-                ],
-              )),
+                  )),
+            ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
         ],
       ),
     );
   }
 }
+
+
+
+
+//  Padding(
+//                 padding: const EdgeInsets.all(10),
+//                 child: Container(
+//                   decoration: BoxDecoration(
+//                     borderRadius: BorderRadius.circular(60),
+//                     color: Colors.black.withOpacity(0.3),
+//                   ),
+//                   child: IconButton(
+//                     onPressed: () {},
+//                     icon: Icon(
+//                       CupertinoIcons.heart_fill,
+//                       color: Colors.white,
+//                     ),
+//                   ),
+//                 ),
+//               ),

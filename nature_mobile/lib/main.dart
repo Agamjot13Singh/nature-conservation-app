@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:nature_mobile/screens/home_page.dart';
+import 'package:nature_mobile/screens/sample.dart';
 
 void main() {
   runApp(const MyApp());
